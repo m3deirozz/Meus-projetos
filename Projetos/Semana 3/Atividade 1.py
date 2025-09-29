@@ -1,89 +1,62 @@
-<!DOCTYPE html><html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Placar Campeonato de Luta - 24 Lutadores</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #eee;
-      text-align: center;
-    }
-    .bracket {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .round {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .match {
-      border: 1px solid #444;
-      border-radius: 8px;
-      padding: 8px;
-      background: #222;
-      min-width: 120px;
-    }
-    .title {
-      font-weight: bold;
-      margin-bottom: 5px;
-      color: #ffcc00;
-    }
-  </style>
-</head>
-<body>
-  <h1>🏆 Campeonato de Luta - 24 Lutadores</h1>
-  <div class="bracket">
-    <!-- Pré-Oitavas -->
-    <div class="round">
-      <div class="title">Pré-Oitavas</div>
-      <div class="match">9 vs 24</div>
-      <div class="match">10 vs 23</div>
-      <div class="match">11 vs 22</div>
-      <div class="match">12 vs 21</div>
-      <div class="match">13 vs 20</div>
-      <div class="match">14 vs 19</div>
-      <div class="match">15 vs 18</div>
-      <div class="match">16 vs 17</div>
-    </div><!-- Oitavas -->
-<div class="round">
-  <div class="title">Oitavas</div>
-  <div class="match">1 vs Venc.1</div>
-  <div class="match">2 vs Venc.2</div>
-  <div class="match">3 vs Venc.3</div>
-  <div class="match">4 vs Venc.4</div>
-  <div class="match">5 vs Venc.5</div>
-  <div class="match">6 vs Venc.6</div>
-  <div class="match">7 vs Venc.7</div>
-  <div class="match">8 vs Venc.8</div>
-</div>
+1
+import math
 
-<!-- Quartas -->
-<div class="round">
-  <div class="title">Quartas</div>
-  <div class="match">Venc.9 vs Venc.10</div>
-  <div class="match">Venc.11 vs Venc.12</div>
-  <div class="match">Venc.13 vs Venc.14</div>
-  <div class="match">Venc.15 vs Venc.16</div>
-</div>
+ld = 8  # Define o comprimento do lado do hexágono
+r3 = 1.732  # Aproximação da raiz quadrada de 3
 
-<!-- Semifinais -->
-<div class="round">
-  <div class="title">Semifinais</div>
-  <div class="match">Venc.17 vs Venc.18</div>
-  <div class="match">Venc.19 vs Venc.20</div>
-</div>
+# Fórmula para calcular a área de um hexágono regular: (3√3/2) * lado²
+resultado = (3*r3/2) * (ld**2)
 
-<!-- Final -->
-<div class="round">
-  <div class="title">Final</div>
-  <div class="match">Venc.21 vs Venc.22</div>
-</div>
+# Arredonda o resultado para 2 casas decimais
+arredondamento = round(resultado, 2)
 
-  </div>
-</body>
-</html>
+# Exibe o resultado formatado
+print('A área do hexágono é de :', arredondamento, 'centimetros ao quadrado.')
+
+2
+# Lista original com números variados
+lista = [2, 5, 8, 9, 12, 15, 18]
+
+# Lista que armazenará os números menores ou iguais a 15
+nova_lista = []
+ 
+# Adiciona à nova_lista apenas os números <= 15
+for numero in lista:
+    if numero <= 15:
+        nova_lista.append(numero)
+
+# Contador de números pares menores ou iguais a 15
+quantidade = 0
+for i in lista:
+    if i % 2 == 0 and i <= 15:
+        quantidade += 1
+
+# Exibe o resultado
+print(f"Quantidade de pares: {quantidade} \n\nNova lista {nova_lista}")
+
+3
+# Função que soma os elementos de uma lista
+def soma_lista(lista):
+    total = 0
+    for num in lista:
+        total += num  # Acumula cada valor na variável 'total'
+    return total  # Retorna a soma total
+
+# Chamada da função com a lista [1, 2]
+lista = [1, 2]
+print(soma_lista(lista))  # Saída será 3
+
+4
+# Tupla com nomes minúsculos
+nomes = ('alice', 'bob', 'lucas')
+
+# Cria uma nova tupla com os nomes convertidos para letras maiúsculas
+nomes_maiusculo = tuple(nome.upper() for nome in nomes)
+
+# Exibe a nova tupla
+print(nomes_maiusculo)
+
+5
+# Loop que imprime os números de 0 a 4
+for i in range(5):
+    print(i)  # Exibe o valor atual de i
